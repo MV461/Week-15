@@ -60,8 +60,8 @@ app.get('/theater/:theaterId', (req, res) => {
 
 app.put('/updateOneTheater', (req, res) => {
 
-    let theaterId = req.body.theaterId
-    let updatedData = req.body.update;
+    let theaterId = req.body.the
+    let updatedData = req.body;
 
     collection.updateOne({ theaterId: parseInt(theaterId) }, { $set: updatedData })
         .then(result => {
